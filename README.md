@@ -61,6 +61,8 @@ $ mvn generate-sources -Pgenerate
 
 ## Releasing
 
+Majors and minors:
+
 ```shell
 $ mvn versions:set versions:set-scm-tag -DnewVersion=1.0.0 -DnewTag=v1.0.0 -DgenerateBackupPoms=false
 $ git add pom.xml && commit -m "release: 1.0.0"
@@ -71,7 +73,17 @@ $ git add pom.xml && commit -m "chore: Prepare for the next development iteratio
 $ git push origin master && git push origin v1.0.0
 ```
 
-Note: The steps where we update the POM **again** and prepare for the next development iteration is not necessary if you are on a detached branch from an existing release tag and you are creating a patch release. Also, the last step only requires you to push the tag, not the `master` branch.
+Patches:
+
+```shell
+$ git checkout v1.0.0
+$ git cherry-pick <Commit SHA of whatever commit you want to patch in>
+$ mvn versions:set versions:set-scm-tag -DnewVersion=1.0.1 -DnewTag=v1.0.1 -DgenerateBackupPoms=false
+$ git add pom.xml && commit -m "release: 1.0.1"
+$ git tag v1.0.1
+$ mvn deploy -Psonatype-oss-release
+$ git push origin v1.0.1
+```
 
 
 ## License
