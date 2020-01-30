@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.viskan</groupId>
+        <artifactId>parent</artifactId>
+        <version>8</version>
+    </parent>
+    <artifactId>cxf-xjc-hce</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Apache CXF XJC #hashCode and #equals plugin</name>
+
+    <properties>
+        <!-- Build -->
+        <maven.compiler.target>1.5</maven.compiler.target>
+        <maven.compiler.source>1.5</maven.compiler.source>
+
+        <!-- Dependencies -->
+        <jaxb.version>2.3.2</jaxb.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>${jaxb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>${jaxb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
