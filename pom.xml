@@ -26,7 +26,7 @@
         <version>8</version>
     </parent>
     <artifactId>cxf-xjc-hce</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Apache CXF XJC #hashCode and #equals plugin</name>
     <description>A plugin for CXF codegen plugin that adds `#hashCode` and `#equals` implementations with zero runtime dependencies for the generated classes.</description>
 
