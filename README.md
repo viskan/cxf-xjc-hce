@@ -62,11 +62,11 @@ $ mvn generate-sources -Pgenerate
 ## Releasing
 
 ```shell
-$ mvn versions:set -DnewVersion=1.0.0 -DnewScmTag=v1.0.0 -DgenerateBackupPoms=false
+$ mvn versions:set versions:set-scm-tag -DnewVersion=1.0.0 -DnewTag=v1.0.0 -DgenerateBackupPoms=false
 $ git add pom.xml && commit -m "release: 1.0.0"
 $ git tag v1.0.0
 $ mvn deploy -Psonatype-oss-release
-$ mvn versions:set -DnewVersion=1.1.0-SNAPSHOT -DnewScmTag=HEAD -DgenerateBackupPoms=false
+$ mvn versions:set versions:set-scm-tag -DnewVersion=1.1.0-SNAPSHOT -DnewTag=HEAD -DgenerateBackupPoms=false
 $ git add pom.xml && commit -m "chore: Prepare for the next development iteration"
 $ git push origin master && git push origin v1.0.0
 ```
