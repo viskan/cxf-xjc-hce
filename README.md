@@ -57,3 +57,8 @@ And generate as usual:
 ```shell
 $ mvn generate-sources -Pgenerate
 ```
+
+
+## License
+
+Apache License 2.0 © [Viskan System AB](http://www.viskan.com)
