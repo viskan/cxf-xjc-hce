@@ -59,6 +59,21 @@ $ mvn generate-sources -Pgenerate
 ```
 
 
+## Releasing
+
+```shell
+$ mvn versions:set -DnewVersion=1.0.0 -DnewScmTag=v1.0.0 -DgenerateBackupPoms=false
+$ git add pom.xml && commit -m "release: 1.0.0"
+$ git tag v1.0.0
+$ mvn deploy -Psonatype-oss-release
+$ mvn versions:set -DnewVersion=1.1.0-SNAPSHOT -DnewScmTag=HEAD -DgenerateBackupPoms=false
+$ git add pom.xml && commit -m "chore: Prepare for the next development iteration"
+$ git push origin master && git push origin v1.0.0
+```
+
+Note: The steps where we update the POM **again** and prepare for the next development iteration is not necessary if you are on a detached branch from an existing release tag and you are creating a patch release.
+
+
 ## License
 
 Apache License 2.0 © [Viskan System AB](http://www.viskan.com)
