@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+   Copyright 2020 Viskan System AB
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -11,6 +28,53 @@
     <artifactId>cxf-xjc-hce</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Apache CXF XJC #hashCode and #equals plugin</name>
+    <description>A plugin for CXF codegen plugin that adds `#hashCode` and `#equals` implementations with zero runtime dependencies for the generated classes.</description>
+
+    <organization>
+        <name>Viskan System AB</name>
+        <url>https://www.viskan.com</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>anton-johansson</id>
+            <name>Anton Johansson</name>
+            <email>antoon.johansson@gmail.com</email>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <url>https://github.com/viskan/cxf-xjc-hce/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/viskan/cxf-xjc-hce</url>
+        <connection>scm:git:git@github.com:viskan/cxf-xjc-hce.git</connection>
+        <developerConnection>scm:git:git@github.com:viskan/cxf-xjc-hce.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>Maven Central Snapshot Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>Maven Central Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <!-- Build -->
